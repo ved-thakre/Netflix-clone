@@ -1,0 +1,9 @@
+.nav__content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_logo{
+    position: fixed;
+    left: 0px;
+}
