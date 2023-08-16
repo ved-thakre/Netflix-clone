@@ -14,3 +14,5 @@ export default function HomeScreen() {
     </div>
   )
 }
+
+// API key -> 2f1dc7c30536ed450e977434151a8479

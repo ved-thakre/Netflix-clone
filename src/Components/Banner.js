@@ -1,7 +1,26 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from './axios'
 import './Banner.css'
+import requests from '../Requests';
 
 function Banner() {
+
+  const [movie, setMovie] = useState([]);
+  
+  useEffect(() => {
+    async function fetchData(){
+        const request = await axios.get(requests.fetchNetflixOriginals);
+        setMovie(
+            request.data.results[
+                Math.floor(Math.random() * (request.data.results.length - 1))
+            ]
+        );
+        return request;
+    }
+    fetchData();
+  }, [])
+
+  console.log(movie)
 
   function truncate(string, n){
      return string?.length > n ? string.substr(0,n-1) + '...' : string;
@@ -11,17 +30,19 @@ function Banner() {
     <header className='banner'
     style={{
         backgroundSize : "cover",
-        backgroundImage : `url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCTAAAAA1BMVEUAAACnej3aAAAASElEQVR4nO3BMQEAAADCoPVPbQhfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeA8XKAAFZcBBuAAAAAElFTkSuQmCC")`,
+        backgroundImage : `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
         backgroundPosition : "center center", //to maintain the img at center
     }}
     > 
     <div className="banner__content">
-        <h1 className="banner_title">Movie Name</h1>
+        <h1 className="banner_title">
+            {movie?.title || movie?.name || movie?.orignal_name}
+        </h1>
         <div className="banner_buttons">
             <button className="banner_button">Play</button>
             <button className="banner_button">My List</button>
         </div>
-        <h1 className="banner_description">{truncate(`This is the test description of the movie which will include the information about movie and how the how the movie is the little bit of the plot or the story of the movie and the little bit introduction of the characters of the movie.`,100)}</h1>
+        <h1 className="banner_description">{truncate(movie?.overview,150)}</h1>
     </div>
     <div className='banner--fadeBottom'/>
     </header>
