@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Banner from './Banner'
-import Row from './Row'
+import Navbar from '../Components/Navbar'
+import Banner from '../Components/Banner'
+import Row from '../Components/Row'
 import './HomeScreen.css'
 import requests from '../Requests'
 

@@ -23,12 +23,12 @@
 }
 
 .row__poster:hover{
-    transform: scale(1.08);
+    transform: scale(1.3);
     opacity: 1;
 }
 
 .row__posterLarge:hover{
-    transform: scale(1.09);
+    transform: scale(1.2);
     opacity: 1;
 }
 
