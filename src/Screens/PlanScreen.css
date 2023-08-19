@@ -1,0 +1,53 @@
+/* PlanScreen.css */
+
+.second {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #282c2d;
+}
+
+.plan__title {
+  font-size: 18px;
+  margin: 0; /* Remove margin to align closely with the button */
+}
+
+.plan__description {
+  font-size: 13px;
+  font-weight: 500;
+  color: grey;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Style the subscribe button */
+button {
+  padding: 10px 20px;
+  background-color: #e50914;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+@media (max-width: 480px) {
+  .second {
+    align-items: center; /* Center items on small screens */
+  }
+  
+  .sub__plans {
+    text-align: center; /* Center text on small screens */
+  }
+  
+  .plan__title {
+    font-size: 16px; /* Reduce font size for small screens */
+  }
+  
+  button {
+    margin-top: 10px; /* Add spacing between button and other content */
+  }
+}

@@ -5,6 +5,7 @@ import { selectUser } from '../features/userSlice';
 import  auth from '../firebase';
 import { useNavigate } from 'react-router-dom';
 import './ProfileScreen.css'
+import PlanScreen from './PlanScreen';
 
 function ProfileScreen() {
 
@@ -38,6 +39,9 @@ function ProfileScreen() {
             <h2>{user.email}</h2>
             <div className="profileScreen__plans">
                <h3>Plans</h3>
+               <PlanScreen planName="Basic" pricing="₹199" Description="720p (HD) Good Quality"/>
+               <PlanScreen planName="Standered" pricing="₹499" Description="1080p (Full HD) Better Quality" />
+               <PlanScreen planName="Premium" pricing="₹649" Description="4K (Ultra HD + HDR) Best Quality" />
               <button onClick={handleSignOut} className='profileScreen__SignOut'>Sign Out</button>
             </div>
           </div>
