@@ -1,8 +1,8 @@
 .loginScreen__logo{
     position: fixed;
     left: 0px;
-    top: 1px;
-    width: 120px;
+    top: 10px;
+    width: 100px;
     object-fit: contain;
     cursor: pointer;
     padding-left: 20px;
