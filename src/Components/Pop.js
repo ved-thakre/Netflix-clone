@@ -13,12 +13,14 @@ function Pop({ movie, onClose }) {
         </button>
         <Info movie={movie} />
         <div className="pop__poster-wrapper">
+          <div className="pop__poster-fade" />
           <img
             src={`${base_url}${movie.backdrop_path}`}
             alt={movie.name || movie.title}
             className="pop__poster"
           />
         </div>
+        <div className="info_back"></div>
       </div>
     </div>
   );

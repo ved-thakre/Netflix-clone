@@ -15,7 +15,7 @@ const requests = {
 
 export default requests
 
-// https://api.themoviedb.org/3/movies/top_rated?api_key=2f1dc7c30536ed450e977434151a8479&language=en-US
+// https://api.themoviedb.org/3/discover/tv?api_key=2f1dc7c30536ed450e977434151a8479&with_networks=213
 
 //   fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28`,
 //   fetchComedyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=35`,

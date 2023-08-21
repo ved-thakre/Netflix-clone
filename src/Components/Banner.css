@@ -27,13 +27,13 @@
 }
 
 .banner--fadeBottom{
-    height: 7.4rem;
+    height: 50vh;
     background-image: linear-gradient(
-        180deg,
-        transparent,
-        rgba(37, 37, 37, 0.61),
-        #111
-    );
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.81),
+    #111
+    )
 }
 
 .banner_button{
@@ -50,6 +50,7 @@
     padding-top: 0.5rem;
     background-color: rgba(51, 51, 51, 0.5);
     padding-bottom: 0.5rem;
+    word-spacing: px;
 }
 
 .banner_button:hover{

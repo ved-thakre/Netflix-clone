@@ -29,7 +29,8 @@ function Banner() {
   return (
     <header className='banner'
     style={{
-        backgroundSize : "cover",
+        backgroundSize: 'cover',
+        height: '90vh',
         backgroundImage : `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
         backgroundPosition : "center center", //to maintain the img at center
     }}

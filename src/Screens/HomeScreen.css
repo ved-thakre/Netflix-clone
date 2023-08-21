@@ -1,0 +1,10 @@
+.Frow {
+    position: relative; /* Add this to the row to enable positioning */
+    z-index: 1; /* Ensure the row is above the banner */
+    margin-top: -120px; /* Adjust this value to control the overlay offset */
+  }
+  
+  /* Adjust the z-index of the banner to make sure it's behind the row */
+  .banner {
+    z-index: 0;
+  }

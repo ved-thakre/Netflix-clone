@@ -1,7 +1,7 @@
 .pop__info {
   position: absolute;
   bottom: 10px; /* Place the info block above the margin */
-  left: 20px; /* Adjust this value to control the distance from the left edge */
+  left: 30px; /* Adjust this value to control the distance from the left edge */
   right: 20px;
   display: flex;
   flex-direction: column;
@@ -9,8 +9,16 @@
   z-index: 1; /* Ensure text appears above the image */
 }
 
+.pop__genre{
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 80%;
+}
+
 .pop__title {
-  font-size: 50px;
+  font-size: 40px;
   color: white;
   padding: 10px;
   border-radius: 5px;
@@ -19,7 +27,70 @@
 
 .pop__description {
   color: white;
-  padding: 5px 10px;
+  padding: 10px 10px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.pop__rating-genre {
+  display: flex;
+  align-items: center;
+  width: 80%; /* Adjust the width as needed */
+}
+
+.pop__rating {
+  flex-grow: 1; /* Take up one-third of available space */
+  flex-basis: 0; /* Necessary for flex-grow to work */
+  font-size: 20px;
+  color: #24e84b;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.pop__genre {
+  flex-grow: 2; /* Take up two-thirds of available space */
+  flex-basis: 0; /* Necessary for flex-grow to work */
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.first__button{
+  margin-left: 10px;
+}
+
+.banner_button1{
+  cursor: pointer;
+  color: black;
+  outline: none;
+  font-size: 20px;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  margin-right: 1rem;
+  padding-top:  0.8rem; 
+  background-color: white;
+  padding-bottom: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.banner_button1:hover{
+  background-color: #E5E6E4;
+}
+
+.genre_name{
+  color: grey;
+}
+
+.pop__play-icon {
+  font-size: 20px; /* Adjust the size as needed */
+  color: black;
+  margin-right: 5px;
 }
