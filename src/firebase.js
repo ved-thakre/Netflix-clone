@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBaXOawVmJJHP43S1HR1hzX_QCGZboEQIA",
-  authDomain: "netflix-87397.firebaseapp.com",
+  authDomain: "netflix-87397.~firebaseapp.com",
   projectId: "netflix-87397",
   storageBucket: "netflix-87397.appspot.com",
   messagingSenderId: "494104901913",

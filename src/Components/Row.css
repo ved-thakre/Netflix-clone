@@ -1,18 +1,20 @@
 /* Row.css */
 .row {
-  margin: -30px 0;
+  margin: -40px 0;
   position: relative;
   color: white;
+  height: 270px;
 }
 
 .title_name {
   color: #fff;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .row__posters {
   display: flex;
   overflow: auto;
+  margin-left: 10px;
 }
 
 .top_con{
@@ -24,42 +26,110 @@
 }
 
 .row__posterContainer {
-  margin-right: 20px;
+  margin-right: 10px;
+  transition: transform 450ms;
+  text-align: center;
+}
+
+.row__posterContainer:hover{
+  transform: scale(1.2);
+  box-shadow: 20px 0 20px -20px #111 inset;
+}
+
+.row__posterContainer:hover ~ .row__posterTitle{
+  filter: brightness(1);
 }
 
 .row__poster {
   max-height: 150px;
   width: auto;
   object-fit: contain;
-  transition: transform 450ms;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.row__poster:hover {
-  transform: scale(1.2);
+.row__poster{
   opacity: 1;
   box-shadow: -3px 10px 18px black;
-  filter: brightness(0.8);
 }
 
 .row__posterTitle {
   position: relative;
   color: white;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
-  cursor: pointer;
-  display: flexbox;
-  bottom: 50px;
+  bottom: 80px;
   opacity: 0;
   transition: opacity 0.5s;
 }
 
-#rating{
-  color: #68fa29;
+/* .button__playlike{
+  display: inline;
+} */
+
+.button__play{
+  position: relative;
+  padding:2px;
+  padding-left: 4px; 
+  border-radius: 50%;
+  right: 95px;
+  bottom: 56px;
   font-size: 15px;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: 2px rgb(255, 255, 255) solid;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.button__add{
+  position: relative;
+  padding:2px;
+  border-radius: 50%;
+  right: 90px;
+  bottom: 55px;
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: 2px rgb(255, 255, 255) solid;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.row__posterContainer:hover .row__poster {
+  filter: brightness(0.7); 
+}
+
+.row__posterContainer:hover .button__play {
+  opacity: 1;
+}
+
+.row__posterContainer:hover .button__add {
+  opacity: 1;
+}
+
+
+#rating{
+  color: #41f041;
+  font-size: 15px;
+  bottom: 753px;
+  text-align: end;
+  right: 12px;
 }
 
 .row__posterContainer:hover .row__posterTitle {
   opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .row__poster {
+    max-height: 100px;
+  }
+
+  .row__posterLarge:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
 }

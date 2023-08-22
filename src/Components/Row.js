@@ -43,11 +43,12 @@ function Row({ title, fetchUrl }) {
                   className="row__poster"
                   src={`${base_url}${movie.backdrop_path}`}
                   alt={movie.title}
-                  onClick={() => openPop(movie)}
-                />
+                  />
                 <p className="row__posterTitle">{movie.title && movie.title.includes(':') ? movie.title.split(':')[0] : movie.title}</p>
-                <h3 className="row__posterTitle" id='rating'> ⭐️ {movie.vote_average.toFixed(1)}</h3>
-             </div> 
+                  <button className='button__play'  onClick={() => openPop(movie)} >▶</button>
+                  <button className='button__add'>+</button>
+                <h3 className="row__posterTitle" id='rating'> {movie.vote_average.toFixed(1) * 10}%</h3>
+            </div> 
             )
         ))}
       </div>

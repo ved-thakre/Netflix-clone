@@ -1,11 +1,17 @@
 import React, {useState, useEffect} from 'react'
 import axios from '../axios'
 import './Banner.css'
+import Pop from './Pop';
 import requests from '../Requests';
 
 function Banner() {
 
   const [movie, setMovie] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState(null);
+
+  const openPop = (movie) => {
+    setSelectedMovie(movie);
+  };
   
   useEffect(() => {
     async function fetchData(){
@@ -40,12 +46,13 @@ function Banner() {
             {movie?.title || movie?.name || movie?.orignal_name}
         </h1>
         <div className="banner_buttons">
-            <button className="banner_button">Play</button>
-            <button className="banner_button">My List</button>
+            <button className="banner_button"><span className='play_icon'>▶</span>Play</button>
+            <button className="banner_button" onClick={() => openPop(movie)}>More Info</button>
         </div>
         <h1 className="banner_description">{truncate(movie?.overview,150)}</h1>
     </div>
     <div className='banner--fadeBottom'/>
+    {selectedMovie && <Pop movie={selectedMovie} onClose={() => setSelectedMovie(null)} />}
     </header>
   )
 }

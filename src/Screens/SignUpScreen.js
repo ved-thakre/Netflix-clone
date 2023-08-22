@@ -6,7 +6,6 @@ import  auth from '../firebase';
 function SignUpScreen() {
 
   const emailRef = useRef(null);
-
   const passwordRef = useRef(null);
 
   const register = (e) => {
