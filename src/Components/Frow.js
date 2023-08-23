@@ -43,13 +43,20 @@ function Frow({ title, fetchUrl }) {
       <h2 className='overlapping_name'>{title}</h2>
       <div className="row__posters">
         {movies.map((movie) => (
-            <img
-              className="row__posterLarge"
-              key={movie.id}
-              src={`${base_url}${movie.poster_path}`}
-              alt={movie.name}
-              onClick={() => openPop(movie)}
-            />
+          (movie.poster_path && 
+              <div className="increase_len" key={movie.id}>
+                  <img
+                  className="row__posterLarge"
+                  src={`${base_url}${movie.poster_path}`}
+                  alt={movie.name}
+                  onClick={() => openPop(movie)}
+                />
+                <p className="row__posterTitle1" onClick={() => openPop(movie)}>{movie.title && movie.title.includes(':') ? movie.title.split(':')[0] : movie.title}</p>
+                  <button className='button__play1'  onClick={() => openPop(movie)} >▶</button>
+                  <button className='button__add1'>+</button>
+                <h3 className="row__posterTitle1" id='rating1'> {movie.vote_average.toFixed(1)}</h3>
+              </div>
+            )
         ))}
       </div>
       {selectedMovie && <Pop movie={selectedMovie} onClose={() => setSelectedMovie(null)} />}
@@ -58,3 +65,5 @@ function Frow({ title, fetchUrl }) {
 }
 
 export default Frow;
+
+

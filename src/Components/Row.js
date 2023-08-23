@@ -35,7 +35,7 @@ function Row({ title, fetchUrl }) {
   return (
     <div className="row">
       <h2 className="title_name">{title}</h2>
-      <div className="row__posters">
+      <div className="row__posters1">
         {movies.map((movie) => (
           (movie.backdrop_path && 
             <div className="row__posterContainer" key={movie.id}>
@@ -44,10 +44,10 @@ function Row({ title, fetchUrl }) {
                   src={`${base_url}${movie.backdrop_path}`}
                   alt={movie.title}
                   />
-                <p className="row__posterTitle">{movie.title && movie.title.includes(':') ? movie.title.split(':')[0] : movie.title}</p>
+                <p className="row__posterTitle" onClick={() => openPop(movie)}>{movie.title && movie.title.includes(':') ? movie.title.split(':')[0] : movie.title}</p>
                   <button className='button__play'  onClick={() => openPop(movie)} >▶</button>
                   <button className='button__add'>+</button>
-                <h3 className="row__posterTitle" id='rating'> {movie.vote_average.toFixed(1) * 10}%</h3>
+                <h3 className="row__posterTitle" id='rating'> {movie.vote_average.toFixed(1)}</h3>
             </div> 
             )
         ))}

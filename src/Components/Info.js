@@ -49,7 +49,7 @@ function Info({ movie }) {
             <button className="banner_button1 first__button"> <span className="pop__play-icon">▶</span> Play</button>
         </div>
       <div className="pop__rating-genre">
-        <h3 className="pop__rating">Rating - {movie.vote_average.toFixed(1)}</h3>
+        <h3 className="pop__rating"><span className='genre_name'>Rating -</span> {movie.vote_average.toFixed(1)}</h3>
         <h3 className="pop__genre"><span className='genre_name'>Genres -</span> {renderGenre(movie.genre_ids)}</h3>
       </div>
       <p className="pop__description">{movie.overview}</p>

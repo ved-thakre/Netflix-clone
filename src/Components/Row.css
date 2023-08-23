@@ -11,17 +11,20 @@
   margin-left: 30px;
 }
 
-.row__posters {
+.row__posters1 {
   display: flex;
   overflow: auto;
-  margin-left: 10px;
+  margin-left: 8px;
+  padding: 27px;
 }
+
+
 
 .top_con{
   position: relative;
 }
 
-.row__posters::-webkit-scrollbar {
+.row__posters1::-webkit-scrollbar {
   display: none;
 }
 
@@ -36,16 +39,11 @@
   box-shadow: 20px 0 20px -20px #111 inset;
 }
 
-.row__posterContainer:hover ~ .row__posterTitle{
-  filter: brightness(1);
-}
-
 .row__poster {
   max-height: 150px;
   width: auto;
   object-fit: contain;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 .row__poster{
@@ -61,42 +59,40 @@
   bottom: 80px;
   opacity: 0;
   transition: opacity 0.5s;
+  cursor: pointer;
 }
-
-/* .button__playlike{
-  display: inline;
-} */
 
 .button__play{
   position: relative;
   padding:2px;
   padding-left: 4px; 
   border-radius: 50%;
-  right: 95px;
-  bottom: 56px;
+  right: 80px;
+  bottom: 60px;
   font-size: 15px;
+  transition: opacity 0.5s;
   height: 30px;
   width: 30px;
-  background-color: transparent;
-  border: 2px rgb(255, 255, 255) solid;
+  background-color: rgba(38, 38, 38, 0.7);
+  border: 2px rgba(137, 137, 137, 0.562) solid;
   opacity: 0;
-  cursor: pointer;
 }
 
 .button__add{
   position: relative;
   padding:2px;
   border-radius: 50%;
-  right: 90px;
-  bottom: 55px;
+  right: 73px;
+  bottom: 59px;
   font-size: 20px;
+  transition: opacity 0.5s;
   height: 30px;
   width: 30px;
-  background-color: transparent;
-  border: 2px rgb(255, 255, 255) solid;
+  background-color: rgba(38, 38, 38, 0.7);
+  border: 2px rgba(203, 203, 203, 0.502) solid;
   opacity: 0;
-  cursor: pointer;
 }
+
 
 .row__posterContainer:hover .row__poster {
   filter: brightness(0.7); 
@@ -110,16 +106,22 @@
   opacity: 1;
 }
 
-
-#rating{
-  color: #41f041;
-  font-size: 15px;
-  bottom: 753px;
-  text-align: end;
-  right: 12px;
+.button__play:hover , .button__add:hover{
+  transform: scale(1.1);
+  border: 2px rgb(255, 255, 255) solid;
 }
 
-.row__posterContainer:hover .row__posterTitle {
+
+#rating{
+  color: #fae017;
+  display: inline;
+  font-size: 14px;
+  transition: opacity 0.5s;
+  bottom: 58px;
+  left: 77px;
+}
+
+.row__posterContainer:hover .row__posterTitle{
   opacity: 1;
 }
 
