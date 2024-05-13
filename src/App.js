@@ -34,16 +34,16 @@ function App() {
   return (
     <div className="App">
       <Router>
-         <Routes>
-            {!user?(
-              <Route exact path="/" element={<LoginScreen />}/>
-            ) : (
-              <>
-                <Route exact path="/profile" element={<ProfileScreen/>}/>
-                <Route exact path="/" element={<HomeScreen/>}/>
-              </>
-            )}
-         </Routes>
+        <Routes>
+          {!user ? (
+            <Route exact path="/" element={<HomeScreen />} />
+          ) : (
+            <>
+              <Route exact path="/profile" element={<ProfileScreen />} />
+              <Route exact path="/" element={<HomeScreen />} />
+            </>
+          )}
+        </Routes>
       </Router>
     </div>
   );
